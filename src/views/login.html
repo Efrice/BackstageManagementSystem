@@ -67,11 +67,11 @@
             $.post("/account/login",{userName,password,vcode},(data)=>{
             // console.log(data);
             if(data.status!=0) {
-                alert(data.message)
+                alert(data.msg)
                 $('#vcodeId').attr('src','/account/vcode?random='+Math.random())
             }else{
                 console.log('登录上啦');
-                location.href = '/studentManager/list'
+                location.href = '/student/list'
             }
         })
         })
